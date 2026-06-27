@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
-from threading import Lock
+from threading import RLock
 
 from .controller import TrafficController
 
@@ -16,7 +16,7 @@ class TrafficControllerBackend:
     ) -> None:
         self._lanes = tuple(lanes)
         self._throughput_per_tick = throughput_per_tick
-        self._lock = Lock()
+        self._lock = RLock()
         self._controller = TrafficController(
             lanes=self._lanes, throughput_per_tick=self._throughput_per_tick
         )
