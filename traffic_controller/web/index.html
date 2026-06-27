@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Traffic Controller</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>AI Traffic Controller</h1>
+      <p>Frontend + backend starter dashboard for traffic optimization simulation.</p>
+
+      <section class="card">
+        <h2>Incoming Traffic Per Tick</h2>
+        <div id="lane-inputs"></div>
+        <label>
+          Emergency lane:
+          <select id="emergency-lane">
+            <option value="">None</option>
+            <option value="north">north</option>
+            <option value="south">south</option>
+            <option value="east">east</option>
+            <option value="west">west</option>
+          </select>
+        </label>
+        <div class="buttons">
+          <button id="step-btn">Run Tick</button>
+          <button id="reset-btn" class="secondary">Reset</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Controller State</h2>
+        <pre id="state-output">Loading...</pre>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
