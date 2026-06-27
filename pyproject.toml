@@ -13,5 +13,9 @@ dependencies = []
 [tool.setuptools]
 packages = ["traffic_controller"]
 
+[tool.setuptools.package-data]
+traffic_controller = ["web/*.html", "web/*.css", "web/*.js"]
+
 [project.scripts]
 traffic-controller = "traffic_controller.cli:main"
+traffic-controller-server = "traffic_controller.api:main"

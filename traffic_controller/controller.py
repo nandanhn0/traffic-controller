@@ -64,3 +64,6 @@ class TrafficController:
                 CongestionLevel(lane=lane.name, level=level, queue_length=lane.queue_length)
             )
         return reports
+
+    def congestion_report(self) -> list[dict]:
+        return [item.__dict__ for item in self._congestion_report()]
